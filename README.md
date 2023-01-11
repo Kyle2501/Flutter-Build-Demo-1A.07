@@ -15,4 +15,18 @@ Other Examples
 
 https://blog.codemagic.io/flutter-go-router-guide/ 
 
+``` 
+final GoRouter _router = GoRouter(
+  routes: [
+    GoRoute(
+      path: "/",
+      builder: (context, state) => const HomePage(),
+    ),
+    GoRoute(
+      path: "/settings",
+      builder: (context, state) => const SettingsPage(),
+    )
+  ],
+);
+```
 
