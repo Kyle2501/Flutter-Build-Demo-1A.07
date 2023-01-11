@@ -4,38 +4,44 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 /// This sample app shows an app with two screens.
-///
+//
 /// The first route '/' is mapped to [HomeScreen], and the second route
 /// '/details' is mapped to [DetailsScreen].
-///
+//
 /// The buttons use context.go() to navigate to each destination. On mobile
 /// devices, each destination is deep-linkable and on the web, can be navigated
 /// to using the address bar.
 void main() => runApp(const MyElkhorn());
 
-/// The route configuration.
+
 final GoRouter _router = GoRouter(
+/// The route configuration.
+
   routes: <RouteBase>[
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
         return const HomeScreen();
+      }, // RouteBase
+
+  routes: <RouteBase>[
+    GoRoute(
+      path: 'details',
+      builder: (BuildContext context, GoRouterState state) {
+        return const DetailsScreen();
       },
-      routes: <RouteBase>[
-        GoRoute(
-          path: 'details',
-          builder: (BuildContext context, GoRouterState state) {
-            return const DetailsScreen();
-          },
-        ),
-      ],
+    ),
+  ], // RouteBase
+
     ),
   ],
 );
 
+
+
 /// The main app.
 class MyElkhorn extends StatelessWidget {
-  /// Constructs a [MyApp]
+  /// Constructs a [MyElkhorn]
   const MyElkhorn({Key? key}) : super(key: key);
 
   @override
@@ -44,7 +50,9 @@ class MyElkhorn extends StatelessWidget {
       routerConfig: _router,
     );
   }
-}
+} // !! main app !!
+
+
 
 /// The home screen
 class HomeScreen extends StatelessWidget {
@@ -69,6 +77,8 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 /// The details screen
 class DetailsScreen extends StatelessWidget {
