@@ -1,7 +1,7 @@
+// . MyElkhorn
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-
 
 /// This sample app shows an app with two screens.
 ///
@@ -11,7 +11,7 @@ import 'package:go_router/go_router.dart';
 /// The buttons use context.go() to navigate to each destination. On mobile
 /// devices, each destination is deep-linkable and on the web, can be navigated
 /// to using the address bar.
-void main() => runApp(const MyApp());
+void main() => runApp(const MyElkhorn());
 
 /// The route configuration.
 final GoRouter _router = GoRouter(
@@ -34,9 +34,9 @@ final GoRouter _router = GoRouter(
 );
 
 /// The main app.
-class MyApp extends StatelessWidget {
+class MyElkhorn extends StatelessWidget {
   /// Constructs a [MyApp]
-  const MyApp({Key? key}) : super(key: key);
+  const MyElkhorn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
